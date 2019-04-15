@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  border-bottom: 2px solid #fef3ca;
+  border-bottom: 2px solid rgb(254,243,202);
   display: block;
   height: 10%;
   position: fixed;
@@ -28,7 +28,7 @@
 .menuListItem {
   min-width: 100px;
   min-height: 50px;
-  border-right: 2px solid #fef3ca;
+  border-right: 2px solid rgb(254,243,202);
 }
 
 .siteLogo {
@@ -48,7 +48,7 @@
 .introSection {
   width: 70%;
   margin: auto;
-  border-bottom: 2px solid #fef3ca;
+  border-bottom: 2px solid rgb(254,	243,	 202);
 
 }
 
@@ -63,7 +63,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  border-bottom: 2px solid #fef3ca;
+  border-bottom: 2px solid rgb(254,243,202);
   position: relative;
   z-index: 2;
     opacity: 1;
@@ -77,7 +77,7 @@
   width: 40%;
   margin: 15px;
   padding-right: 5px;
-  border-right: 2px solid #fef3ca;
+  border-right: 2px solid rgb(254,243,202);
   min-width: 315px;
 }
 
@@ -88,7 +88,7 @@ img {
 .aboutMeSection {
   width: 60%;
   margin: auto;
-  border-bottom: 2px solid #fef3ca;
+  border-bottom: 2px solid rgb(254,243,202);
   position: relative;
   z-index: 2;
 }
