@@ -1,33 +1,103 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  font-family: 'News Cycle', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-bottom: 2px solid #fef3ca;
+  display: block;
+  height: 10%;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: white;
+}
+
+
+.menuList {
+  width: 40%;
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.menuListItem {
+  min-width: 100px;
+  min-height: 50px;
+  border-right: 2px solid #fef3ca;
+}
+
+.siteLogo {
+  height: 10%;
+  width: 20%;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.mainContent {
+  padding-top: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.introSection {
+  width: 70%;
+  margin: auto;
+  border-bottom: 2px solid #fef3ca;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.introList {
+  text-align:center;
+  font-size: 25px;
 }
+
+.projectSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 2px solid #fef3ca;
+}
+
+.projectHeader {
+  width: 100%;
+}
+
+.project {
+  width: 40%;
+  margin: 15px;
+  padding-right: 5px;
+  border-right: 2px solid #fef3ca;
+  min-width: 315px;
+}
+
+img {
+  width: 100%;
+}
+
+.aboutMeSection {
+  width: 60%;
+  margin: auto;
+  border-bottom: 2px solid #fef3ca;
+}
+
+@media (max-width: 720px)
+ {
+   .menuNav {
+     display: none;
+   }
+
+   .siteLogo {
+     width: 30%;
+   }
+
+   .aboutMeSection {
+     width: 90%;
+   }
+ }
