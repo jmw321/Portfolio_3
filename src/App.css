@@ -20,7 +20,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   margin: 0;
 }
@@ -29,6 +29,11 @@
   min-width: 100px;
   min-height: 50px;
   border-right: 2px solid rgb(254,243,202);
+}
+
+.menuListItem:hover {
+  background-color: rgb(254,243,202);
+  cursor: pointer;
 }
 
 .siteLogo {
@@ -66,7 +71,7 @@
   border-bottom: 2px solid rgb(254,243,202);
   position: relative;
   z-index: 2;
-    opacity: 1;
+  opacity: 1;
 }
 
 .projectHeader {
@@ -79,6 +84,11 @@
   padding-right: 5px;
   border-right: 2px solid rgb(254,243,202);
   min-width: 315px;
+  cursor: pointer;
+}
+
+.project:hover {
+  opacity: .7;
 }
 
 img {
@@ -95,13 +105,10 @@ img {
 
 @media (max-width: 720px)
  {
-   .menuNav {
+   .menuNav, .siteLogo {
      display: none;
    }
 
-   .siteLogo {
-     width: 30%;
-   }
 
    .aboutMeSection {
      width: 90%;
