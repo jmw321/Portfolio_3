@@ -4,13 +4,14 @@ import Project from './Project.js';
 import Task from "./Taskboard.jpg";
 import Uv from "./uvtracknew.jpg";
 import Hoa from "./hoa.jpg";
+import Dinner from "./Dinner.jpg";
 
 
     var projects = [
       {id: 0, name: "Task Board", show:false, image:Task, description: "Built using React, this is a task board based on a Kanban board. Create a new card, add or remove a task item."},
       {id: 1, name: "HOA", image:Hoa,show:false, description: "Built using React, this is a sample site for a community homeowner association. Uses routing to navigate to additional site pages."},
       {id: 2, name: "UV Index App", image:Uv, show:false, description: "Built using React, a single page app that uses API from OpenUV to fetch realtime UV index. Also, as a fun feature, user is able to choose from different backgrounds."},
-      {id: 3, name: "UV Index App", image:Uv, show:false, description: "Built using React, a single page app that uses API from OpenUV to fetch realtime UV index. Also, as a fun feature, user is able to choose from different backgrounds."},
+      {id: 3, name: "Dinner App", image:Dinner, show:false, description: "Built using React, a single page app that selects random recipes. Can be integrated with recipe APIs to return searchable recipes."},
 
     //  {id: 3, name: "Arcade Game"},
     //  {id: 4, name: "Neighborhood App"},
