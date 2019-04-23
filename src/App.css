@@ -1,10 +1,11 @@
 .App {
   text-align: center;
   font-family: 'News Cycle', sans-serif;
+
 }
 
 .App-header {
-  border-bottom: 2px solid rgb(254,243,202);
+  border-bottom: 2px solid #fbd6b9;
   display: block;
   height: 10%;
   position: fixed;
@@ -28,12 +29,27 @@
 .menuListItem {
   min-width: 100px;
   min-height: 50px;
-  border-right: 2px solid rgb(254,243,202);
+  border-right: 2px solid #fbd6b9;
+
 }
 
-.menuListItem:hover {
-  background-color: rgb(254,243,202);
+.menuListItem::after {
+  display: block;
+  height: 2px;
+  width: 0px;
+  content: ' ';
+  background-color: #fbd6b9;
+  transition: width 2s;
+}
+
+.menuListItem:hover::after {
   cursor: pointer;
+  width: 100px;
+}
+
+@keyframes underline  {
+  0%    { border-bottom: 0px solid #fbd6b9;  }
+  100%  { border-bottom: 2px solid #fbd6b9;  }
 }
 
 .siteLogo {
@@ -53,13 +69,14 @@
 .introSection {
   width: 70%;
   margin: auto;
-  border-bottom: 2px solid rgb(254,	243,	 202);
+  border-bottom: 2px solid #fbd6b9;
+  font-family: 'Libre Baskerville';
 
 }
 
 
 .introList {
-  text-align:center;
+  text-align: center;
   font-size: 25px;
 }
 
@@ -68,7 +85,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  border-bottom: 2px solid rgb(254,243,202);
+  border-bottom: 2px solid #fbd6b9;
   position: relative;
   z-index: 2;
   opacity: 1;
@@ -82,7 +99,7 @@
   width: 40%;
   margin: 15px;
   padding-right: 5px;
-  border-right: 2px solid rgb(254,243,202);
+  border-right: 2px solid #fbd6b9;
   min-width: 315px;
   cursor: pointer;
 }
@@ -98,7 +115,7 @@ img {
 .aboutMeSection {
   width: 60%;
   margin: auto;
-  border-bottom: 2px solid rgb(254,243,202);
+  border-bottom: 2px solid #fbd6b9;
   position: relative;
   z-index: 2;
 }
