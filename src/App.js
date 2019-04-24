@@ -18,10 +18,13 @@ import Dinner from "./Dinner.jpg";
     //  {id: 5, name: "Memory Game"}
     ];
 
+    var menuClass = "menuNavListHide";
+
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {projects}
+    this.state = {projects, menuClass}
 }
   render() {
 
@@ -31,12 +34,17 @@ class App extends Component {
        this.setState({projects:newProjects})
    }
 
+   var navigationToggle = (event) => {
+     this.state.menuClass === "menuNavList" ? this.setState({menuClass: "menuNavListHide"}) : this.setState({menuClass: "menuNavList"})
+   }
+
     return (
       <div className="App">
         <header className="App-header">
           <div className="siteLogo">  JENNA MICHELE </div>
+          <div className="mobileNavigation"> <i class="fas fa-bars fa-2x"  onClick={navigationToggle}></i> </div>
           <nav className="menuNav">
-            <ul className="menuList">
+            <ul id={this.state.menuClass} className="menuList">
               <li className="menuListItem" id="0"> ABOUT ME </li>
               <li className="menuListItem" id="1"> PROJECTS </li>
               <li className="menuListItem" id="2"> CONTACT ME </li>
