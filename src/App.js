@@ -24,6 +24,9 @@ import Dinner from "./Dinner.jpg";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.scrollDiv = React.createRef();
+    this.scrollDivProj = React.createRef();
+    this.scrollDivContact = React.createRef();
     this.state = {projects, menuClass}
 }
   render() {
@@ -45,9 +48,12 @@ class App extends Component {
           <div className="mobileNavigation"> <i class="fas fa-bars fa-2x"  onClick={navigationToggle}></i> </div>
           <nav className="menuNav">
             <ul id={this.state.menuClass} className="menuList">
-              <li className="menuListItem" id="0"> ABOUT ME </li>
-              <li className="menuListItem" id="1"> PROJECTS </li>
-              <li className="menuListItem" id="2"> CONTACT ME </li>
+              <li className="menuListItem" id="0" onClick={() => {
+              this.scrollDiv.current.scrollIntoView({ behavior: 'smooth' }); }}> ABOUT ME </li>
+              <li className="menuListItem" id="1" onClick={() => {
+              this.scrollDivProj.current.scrollIntoView({ behavior: 'smooth' }); }}> PROJECTS </li>
+              <li className="menuListItem" id="2" onClick={() => {
+              this.scrollDivContact.current.scrollIntoView({ behavior: 'smooth' });}}> CONTACT ME </li>
             </ul>
           </nav>
         </header>
@@ -57,11 +63,11 @@ class App extends Component {
             <p id="1" className="introList"> I'm Jenna. </p>
             <p id="2" className="introList"> See what I can do for you! </p>
           </div>
-          <div className="projectSection">
+          <div className="projectSection" ref={this.scrollDivProj}>
           <h1 className="projectHeader"> Projects </h1>
               {this.state.projects.map(item => <Project image={item.image} id={item.id} show={item.show} summary={item.description} toggleProject={toggleProject} />)}
           </div>
-          <div className="aboutMeSection">
+          <div className="aboutMeSection" ref={this.scrollDiv}>
           <h1 className="aboutHeader"> About Me </h1>
           <div> Welcome! As you probably guessed, my name is Jenna. I am passionate about
             web development and design. I began my coding journey with Udacity
@@ -71,7 +77,7 @@ class App extends Component {
             which inspired my project to track UV exposure! I hope to work
             with you soon! </div>
           </div>
-          <div className="contactMeSection">
+          <div className="contactMeSection" ref={this.scrollDivContact}>
           <h1 className="contactHeader"> Contact Me </h1>
               <div> <i class="far fa-envelope fa-2x"></i> <p> Email Me @ jenna.wills321@gmail.com</p> </div>
               <div> <i class="fab fa-linkedin fa-2x"></i> <p> Connect with me on <a href="https://www.linkedin.com/in/jenna-p-785034104"> LinkedIn! </a> </p> </div>
