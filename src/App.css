@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   font-family: 'News Cycle', sans-serif;
-
 }
 
 .App-header {
@@ -14,6 +13,11 @@
   background-color: white;
 }
 
+#logo-intro {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
 
 .menuList {
   width: 40%;
@@ -68,18 +72,20 @@
 }
 
 .mainContent {
-  padding-top: 10%;
+  padding-top: 7%;
   display: flex;
   flex-direction: column;
 }
 
 
 .introSection {
-  width: 70%;
+  width: 50%;
   margin: auto;
   border-bottom: 2px solid #fbd6b9;
   font-family: 'Libre Baskerville';
-
+  align-items: center;
+  display: flex;
+  min-height: 300px;
 }
 
 
@@ -121,11 +127,13 @@ img {
 }
 
 .aboutMeSection {
-  width: 60%;
+  width: 70%;
   margin: auto;
   border-bottom: 2px solid #fbd6b9;
   position: relative;
   z-index: 2;
+  min-height: 250px;
+  text-align: center;
 }
 
 @media (max-width: 720px)
@@ -134,28 +142,45 @@ img {
      display: none;
    }
 
+
    #menuNavList {
-     flex-direction: column;
-     flex-wrap: wrap;
+     display: block;
      float: left;
      width: 80%;
      margin-top: 40px;
      background-color: #fbd6b9;
+     position: absolute;
+     z-index: -99999;
+     overflow: hidden;
+     animation-name: slideDownMenus;
+     animation-duration: 2s;
+   }
+
+   .menuList {
+     display: block;
+     float: left;
+     width: 80%;
    }
 
    .mobileNavigation {
      display: flex;
      margin: auto;
      width: 70%;
+     height: 40px;
    }
 
-   .aboutMeSection {
-     width: 90%;
-   }
+
 
    #menuNavListHide {
      display: none;
    }
+
+   @keyframes slideDownMenus  {
+     0%    { height: 0px;}
+     100%  { height: 150px;}
+   }
+
+
 
 
  }
